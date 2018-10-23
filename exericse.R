@@ -15,13 +15,14 @@ View(team.data)
 
 
 # Add a column that gives the turnovers to steals ratio (TOV / STL) for each team
-
+new_data <- mutate(team.data, ratio = TOV / STL)
 
 # Sort the teams from lowest turnover/steal ratio to highest
-
+sorted_teams <- arrange(new_data, ratio)
 
 #Find the average BLK and STL for teams having a TOV greater than the average TOV of all teams
-
+average_tov <- mean(team.data)
+filtered_team <- filter(team.data, ) 
 
 # Get the team that had the highest Total Rebounds (TRB) only with the columns 
 # Team and TRB  *using one line of code*
